@@ -74,8 +74,8 @@ To set up social authentication:
 
 To rename the project:
 
-1. Locate the `renameproject` command in `base/management/commands`.
-2. Run the command: `python manage.py renameproject 'old name' 'new name'`.
+1. Run the command: `python manage.py renameproject 'old name' 'new name'`.
+2. The `renameproject` command file is located in `base/management/commands`.
 
 ### Styling
 <a href="https://ibb.co/BgcThdK"><img src="https://i.ibb.co/mHbhn1F/Screenshot-11.png" alt="Screenshot-11" border="0" /></a>
