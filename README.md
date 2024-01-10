@@ -49,6 +49,8 @@ It includes a basic set of features to kickstart development.
 
 ### Social Authentication Setup
 
+<a href="https://ibb.co/9yK0RF8"><img src="https://i.ibb.co/7rMD7wY/Screenshot-10.png" alt="Screenshot-10" border="0" /></a>
+
 To set up social authentication:
 
 1. Navigate to the Django admin interface.
@@ -63,6 +65,8 @@ To set up social authentication:
 
 ### User and Profile Management
 
+<a href="https://ibb.co/4Nw9gYs"><img src="https://i.ibb.co/h8xh1ZX/Screenshot-13.png" alt="Screenshot-13" border="0" /></a>
+
 - Profiles are automatically created for new users through Django signals.
 - Access user settings at `http://127.0.0.1:8000/settings`.
 
@@ -74,6 +78,8 @@ To rename the project:
 2. Run the command: `python manage.py renameproject 'old name' 'new name'`.
 
 ### Styling
+<a href="https://ibb.co/BgcThdK"><img src="https://i.ibb.co/mHbhn1F/Screenshot-11.png" alt="Screenshot-11" border="0" /></a>
+<a href="https://ibb.co/99SWf2J"><img src="https://i.ibb.co/vxRkrmb/Screenshot-12.png" alt="Screenshot-12" border="0" /></a>
 - The project includes basic Bootstrap styling across the website for a uniform look and feel.
 - `allauth` forms are also styled with Bootstrap to maintain consistency with the overall design.
 - Includes an empty Vue.js file for quick prototyping, it is already included in `base.html`.
