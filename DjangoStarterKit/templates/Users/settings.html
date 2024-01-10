@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<link href="{% static 'css/profile.css' %}" rel="stylesheet">
+
+<div class="container">
+    <h2 class="mb-4">Settings</h2>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="settingsTabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="account-settings-tab" data-toggle="tab" href="#account-settings" role="tab" aria-controls="account-settings" aria-selected="true">Account Settings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="placeholder-tab1" data-toggle="tab" href="#placeholder1" role="tab" aria-controls="placeholder1" aria-selected="false">Personal Settings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="placeholder-tab2" data-toggle="tab" href="#placeholder2" role="tab" aria-controls="placeholder2" aria-selected="false">Settings Tab 1</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content mt-3">
+        <div class="tab-pane fade show active" id="account-settings" role="tabpanel" aria-labelledby="account-settings-tab">
+            <div class="settings-options d-flex flex-column align-items-start" style="max-width: 200px;">
+                <a href="{% url 'account_change_password' %}" class="btn btn-outline-primary my-2 w-100 text-left">Password</a>
+                <a href="{% url 'account_email' %}" class="btn btn-outline-primary my-2 w-100 text-left">Email</a>
+                <a href="{% url 'socialaccount_connections' %}" class="btn btn-outline-primary my-2 w-100 text-left">Google Account</a>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="placeholder1" role="tabpanel" aria-labelledby="placeholder-tab1">
+            <!-- Content for Personal Settings -->
+        </div>
+
+        <div class="tab-pane fade" id="placeholder2" role="tabpanel" aria-labelledby="placeholder-tab2">
+            <!-- Content for Settings Tab 1 -->
+        </div>
+    </div>
+</div>
+{% endblock %}

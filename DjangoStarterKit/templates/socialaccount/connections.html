@@ -1,0 +1,38 @@
+{% extends "socialaccount/base_manage.html" %}
+{% load i18n %}
+{% load allauth %}
+
+{% block head_title %}
+    {% trans "Account Connections" %}
+{% endblock head_title %}
+
+{% block content %}
+<div class="container my-4">
+    <h1 class="text-center mb-3">{% trans "Account Connections" %}</h1>
+    {% if form.accounts %}
+        <p class="text-center">
+            {% blocktrans %}You can sign in to your account using any of the following third-party accounts:{% endblocktrans %}
+        </p>
+        <form method="post" action="{% url 'socialaccount_connections' %}">
+            {% csrf_token %}
+            {% for acc in form.fields.account.choices %}
+                {% with account=acc.0.instance.get_provider_account %}
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="id_account_{{ account.account.pk }}" name="account" value="{{ account.account.pk }}">
+                        <label class="form-check-label" for="id_account_{{ account.account.pk }}">
+                            {{ account }} - <span class="badge bg-secondary">{{ account.get_brand.name }}</span>
+                        </label>
+                    </div>
+                {% endwith %}
+            {% endfor %}
+            <button type="submit" class="btn btn-danger mt-3">{% trans 'Remove' %}</button>
+        </form>
+    {% else %}
+        <p class="text-center">{% trans 'You currently have no Google account connected to this account.' %}</p>
+    {% endif %}
+    <h2 class="mt-4 text-center">{% trans 'Add your Google Account' %}</h2>
+
+    {% include "socialaccount/snippets/provider_list.html" with process="connect" %}
+    {% include "socialaccount/snippets/login_extra.html" %}
+</div>
+{% endblock content %}
