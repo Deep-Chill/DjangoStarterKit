@@ -27,7 +27,7 @@ It includes a basic set of features to kickstart development.
 ### Installation
 
 1. **Clone the Repository**:
-   - `git clone [repository link]`
+   - `git clone [https://github.com/Deep-Chill/DjangoStarterKit.git]`
 
 2. **Install Dependencies**:
    - `pip install -r requirements.txt`
