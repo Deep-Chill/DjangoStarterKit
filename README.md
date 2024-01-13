@@ -80,8 +80,8 @@ To rename the project:
 ### Styling
 <a href="https://ibb.co/BgcThdK"><img src="https://i.ibb.co/mHbhn1F/Screenshot-11.png" alt="Screenshot-11" border="0" /></a>
 <a href="https://ibb.co/99SWf2J"><img src="https://i.ibb.co/vxRkrmb/Screenshot-12.png" alt="Screenshot-12" border="0" /></a>
-- The project includes basic Bootstrap styling across the website for a uniform look and feel.
-- `allauth` forms are also styled with Bootstrap to maintain consistency with the overall design.
+- The project includes basic Bootstrap styling across the project.
+- `allauth` forms are also styled with Bootstrap to maintain design consistency.
 - Includes an empty Vue.js file for quick prototyping, it is already included in `base.html`.
 
 
